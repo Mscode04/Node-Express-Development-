@@ -1,0 +1,25 @@
+{{!-- For llop --}}
+{{#each value }}
+    <h1>{{this}}</h1>
+{{/each}}
+
+
+{{!-- object  --}}
+<h1>{{person.Comments.Comment}}</h1>
+
+
+{{!-- if else  --}}
+{{#if user.admin}}
+    <h1>Admin dash</h1>
+{{else}}    
+<h2>Normal user</h2>
+{{/if}}
+
+
+{{!-- Use with for easy to accsecs inner object --}}
+
+{{#with person}}
+{{#with Comments}}
+<h1>{{Comment}}</h1>
+{{/with}}
+{{/with}}
